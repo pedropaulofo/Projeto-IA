@@ -37,10 +37,12 @@ proibida(Palavra) :-  last_char(Palavra, u), \+ excecao(Palavra).
 proibida(Palavra) :-  last_char(Palavra, x), \+ excecao(Palavra).
 proibida(Palavra) :-  last_char(Palavra, z), \+ excecao(Palavra).
 proibida(bit).
-
+proibida(agora).
+proibida(fora).
 
 
 % Excecoes gerais
+excecao(ré).
 excecao(pá).
 excecao(lei).
 excecao(vis).
@@ -56,6 +58,7 @@ excecao(internet).
 % Exceções em -m
 excecao(nuvem).
 excecao(Palavra) :-  string_length(Palavra, L), L > 4, substring(Palavra, L-3, 4, agem), Palavra \== pagem.
+excecao(jovem).
 
 
 % Exceções: feminino singular terminadas em -ão.
@@ -92,7 +95,7 @@ excecao(vogal).
 excecao(estatal).
 excecao(federal).
 excecao(cal).
-
+excecao(policial).
 
 % Exceções: feminino singular terminadas em -z
 excecao(voz).
@@ -157,11 +160,8 @@ excecao(raquete).
 excecao(classe).
 excecao(doente).
 excecao(crentes).
-excecao(vontade).
 excecao(chefe).
-excecao(jovem).
 excecao(interprete).
-excecao(policial).
 excecao(herege).
 excecao(Palavra) :-  string_length(Palavra, L), L > 4, substring(Palavra, L-3, 4, nete).
 excecao(Palavra) :-  string_length(Palavra, L), L > 4, substring(Palavra, L-3, 4, dade).

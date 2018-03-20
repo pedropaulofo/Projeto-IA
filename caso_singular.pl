@@ -186,3 +186,26 @@ excecao(Palavra) :-  string_length(Palavra, L), L > 4, substring(Palavra, L-3, 4
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
